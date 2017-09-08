@@ -5,10 +5,12 @@ import java.util.*;
 
 
 public class Main {
+
     public static final String FILE_PATH = "src/com/company/speedText.txt";
 
     public static void main(String[] args) {
         boolean flag = false;
+        double twokmh=0.5555555555555556;
         ArrayList<Speed> speedlist=new ArrayList<>();
         try {
             Scanner in = new Scanner(new File(FILE_PATH));
@@ -29,7 +31,7 @@ public class Main {
             //3 проверка значения скорости в массиве
             for (Speed p:speedlist) {
 
-                if (p.getMs() == 0.5555555555555556) {
+                if (p.getMs() == twokmh) {
                     System.out.println("yes");
                     flag = true;
                     break;
