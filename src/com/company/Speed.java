@@ -1,9 +1,5 @@
 package com.company;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.*;
-
 /**
  * Created by gamur on 05.09.2017.
  */
@@ -70,9 +66,4 @@ public class Speed  {
 
 
 }
-/*
-1 kmh = 0.278 ms
-        1 mph = 0.447 ms
-        1 kn = 0.514 ms
-        2 ms = 2 ms
-        2 kmh = 0.556 ms*/
+

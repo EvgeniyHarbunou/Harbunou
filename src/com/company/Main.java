@@ -16,20 +16,20 @@ public class Main {
                 speedlist.add(new Speed(in.nextInt(),in.next()));
             }
             //1 вывод скоростей с переводом в мс
-            for(int i=0;i<speedlist.size();++i) {
-                System.out.println(speedlist.get(i));
+            for(Speed p:speedlist) {
+                System.out.println(p);
             }
             System.out.print("\n");
-            //2 сортировка массива по фактической скорости
+            //2 сортировка массива по фактической скорости.
             Collections.sort(speedlist, new SpeedSortByMs());
-            for(int i=0;i<speedlist.size();i++){
-                System.out.println(speedlist.get(i).getValue()+" "+speedlist.get(i).getUnit());
+            for(Speed p:speedlist){
+                System.out.println(p.getValue()+" "+p.getUnit());
             }
             System.out.print("\n");
             //3 проверка значения скорости в массиве
-            for (int i = 0; i < speedlist.size(); i++) {
+            for (Speed p:speedlist) {
 
-                if (speedlist.get(i).getMs() == 0.5555555555555556 || flag) {
+                if (p.getMs() == 0.5555555555555556) {
                     System.out.println("yes");
                     flag = true;
                     break;
@@ -41,8 +41,8 @@ public class Main {
             //4 вывод массива отсортированого по ед. изм.
             Collections.sort(speedlist,new SpeedSortByMs().reversed());
             Collections.sort(speedlist,new SpeedSortByName());
-            for(int i=0;i<speedlist.size();i++){
-                System.out.println(speedlist.get(i).getValue()+" "+speedlist.get(i).getUnit());
+            for(Speed p:speedlist){
+                System.out.println(p.getValue()+" "+p.getUnit());
             }
 
         } catch ( Exception ex ) {
